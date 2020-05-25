@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Build Your Own Cheat Sheet: HTML Form Elements</title>
+        <link rel="stylesheet" type="text/css" href="RESOURCES\styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>HTML Form Elements and Attributes</h1>
+                <h2>A cheat sheet</h2>
+                    <h3>by Renée Becattini | 25 May 2020</h3>
+        </header>
+        <main>
+
+            <!--The following section works as introduction and displays an ordered list of links to the sections contiaining each table-->
+
+            <section class="intro">
+                <p>This cheat sheet is one of Codecademy's practice projects. 
+                    It lists the HTML elements (with related attributes) used in the creation of forms that I've come across so far in my coding journey.</p>
+                
+                <ol>
+                    <li><a href="#element">Element Tags</a></li>
+                    <li><a href="#attribute">Attributes</a></li>
+                </ol>
+            </section>
+
+            <!--The following section displays a table made up of 7 rows and 5 columns-->
+
+            <section id="element">
+                <table class="table">
+                    <thead class="header">
+                        
+                        <tr>
+                            <th colspan="4" >Element Tags</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Element</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Attributes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&lt;form&gt;</td>
+                            <td>Form</td>
+                            <td>The wrapper element for HTML forms. <br>Responisible for collecting information to send "somewhere else".</td>
+                            <td><span class="required">action</span>, <span class="required">method</span></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;input&gt;</td>
+                            <td>Input</td>
+                            <td>Creates an input field for the user to fill out. Self-closing.</td>
+                            <td><span class="required">name</span>, <span class="required">id</span>, <span class="required">type</span>, <span class="required">list, </span><span class="not-required">value</span>, <span class="not-required">step</span></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;label&gt;</td>
+                            <td>Label</td>
+                            <td>Used to identify an &lt;input&gt; element. <br>It displays the text between its opening and closing tags. </td>
+                            <td><span class="required">for</span></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;select&gt;</td>
+                            <td>Select</td>
+                            <td>Creates a <span class="name-tag">dropdown list</span>, an organised list from which the user can choose one item. <br>Requires that the choices be listed using the &lt;option&gt; element.<br>Useful in case there are many options to choose from.</td>
+                            <td><span class="required">id</span>, <span class="required">name</span></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;datalist&gt;</td>
+                            <td>Datalist</td>
+                            <td>Alternative to the <span class="name-tag">dropdown list</span> with a great number of options. <br>The &lt;datalist&gt; tag can help the user search through the list by typing characters in the input field.</td>
+                            <td><span class="required">id</span></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;option&gt;</td>
+                            <td>Option</td>
+                            <td>Displays the options of a <span class="name-tag">dropown list</span> or a of <span class="name-tag">datalist</span>. <br>In the firts case, the text describing the option must be written between its opening and closing tags. In the second case, the text describing the option is given by the <span class="attribute">value</span> attribute.</td>
+                            <td><span class="required">value</span></td>
+                        </tr>
+                        <tr>
+                            <td>&lt;textarea&gt;</td>
+                            <td>Textarea</td>
+                            <td>Allows to create a bigger text field (than &lt;input type="text"&gt;). </td>
+                            <td><span class="not-required">rows</span>, <span class="not-required">cols</span></td>
+                        </tr> 
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="5"><span class="required">Red</span> attributes are <span class="required">required</span>, <span class="not-required">blue</span> attributes can be <span class="not-required">omitted</span>.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            
+            </section>
+
+                <br>
+                <br>
+                <br>
+
+                <!--The following section displays a table made up of 11 rows and 2 columns-->
+
+            <section id="attribute">
+                <table class="table">
+                    <thead class="header">
+                        <tr>
+                            <th colspan="2">Attributes</th>                       
+                        </tr>
+                        <tr>
+                            <th scope="col">Attribute</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <body>
+                        <tr>
+                            <td>action</td>
+                            <td>Determines where the information is sent.</td>
+                        </tr>
+                        <tr>
+                            <td>method</td>
+                            <td>The attribute is assigned a HTTP verb that is included in the HTTP request (i.e. POST or GET).</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>Without this attribute the information in the input field won't be submitted.<br> At submission the values of <span class="attribute">name</span> and <span class="attribute">value</span> are paired together and sent where stated by the <span class="attribute">action</span>attribute</td>
+                        </tr>
+                        <tr>
+                            <td>id</td>
+                            <td>Used wihtin the &lt;input&gt; tag so it can be uniquely linked to its &lt;label&gt; tag via the <span class="attribute">for</span> attribute;<br>or within the &lt;datalist&gt; tag so it can be uniquely linked to its &lt;input&gt; tag via the <span class="attribute">list</span> attribute.</td>
+                        </tr>
+                        <tr>
+                            <td>type</td>
+                            <td>Describes what the kind of input is requested of the user.<br>Among its possible values: "text", "password", "number", "range", "checkbox", "radio", "submit".</td>
+                        </tr>
+                        <tr>
+                            <td>list</td>
+                            <td>Used within the &lt;input&gt; tag when creating a <span class="name-tag">datalist</span>.<br>Links back to the <span class="attribute">id</span> attribute in &lt;datalist&gt;.</td>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>It's value becomes whatever the user has typed into the field.<br> If <span class="attribute">type</span>=text or submit, the value can be omitted as it's implied.<br>If <span class="attribute">type</span>=checkbox or radio, it's required.<br>Required also when using the &lt;option&gt; element. </td>
+                        </tr>
+                        <tr>
+                            <td>step</td>
+                            <td>Used in case of <span class="attribute">type</span>=number.<br>It allows to add arrows inside the input field to increase or decrease the value in the input field.</td>
+                        </tr>
+                        <tr>
+                            <td>for</td>
+                            <td>Used within the &lt;label&gt; tag to uniquely link to an element carrying an <span class="attribute">id</span> attribute.</td>
+                        </tr>
+                        <tr>
+                            <td>rows</td>
+                            <td>Used determine the amount of rows we want in the textarea.</td>
+                        </tr>
+                        <tr>
+                            <td>cols</td>
+                            <td>Used determine the amount of cols we want in the textarea.</td>
+                        </tr>
+                        
+                    </body>
+                </table>
+
+            </section>
+        </main>
+    </body>
+</html>
